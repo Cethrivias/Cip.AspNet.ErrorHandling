@@ -1,3 +1,4 @@
+using Api.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;
@@ -9,6 +10,7 @@ public class HelloController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> Get()
     {
-        return Ok("Hello, World!");
+        throw new DoraException();
+//        return Ok("Hello, World!");
     }
 }
